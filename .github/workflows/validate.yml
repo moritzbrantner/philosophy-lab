@@ -40,6 +40,14 @@ jobs:
           bun-version: 1.4.0
           install-mode: none
 
+      - name: Preserve conformance failure evidence
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: conformance-report
+          path: .artifacts/coding-tooling/report.json
+          if-no-files-found: error
+
       - name: Check deterministic findings
         uses: moritzbrantner/coding-tooling@4524918dc26ad9eec85df43c7c11fb08aca6d054
         with:
