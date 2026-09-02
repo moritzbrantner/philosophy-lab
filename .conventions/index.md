@@ -116,8 +116,6 @@ Read this section first. Open the linked managed source when a rule is relevant,
 - **DEP-013 — Make dependency changes explicit transactions** — Ordinary install and verification commands use the committed lockfile without modifying it. ([details](modules/dependencies/conventions/dependencies/README.md))
 - **DEP-014 — Keep production dependency graphs acyclic by default** — Production package, module, project, and repository dependency graphs should be acyclic where the ecosystem can model and verify the relationship. ([details](modules/dependencies/conventions/dependencies/README.md))
 - **DEP-015 — Centralize automated dependency update policy** — Use Renovate as the canonical routine dependency-update engine for repositories adopting these conventions. ([details](modules/dependencies/conventions/dependencies/README.md))
-- **DOCKER-001 — Pin container inputs according to reproducibility risk** — Local development may use exact version tags when readable version selection is useful. ([details](modules/docker/technologies/docker/README.md))
-- **DOCKERFILE-001 — Keep runtime images minimal and reproducible** — Prefer multi-stage builds when build and runtime requirements differ. ([details](modules/dockerfile/technologies/docker/dockerfile/README.md))
 - **ENV-001 — Keep irreplaceable development state outside disposable containers** — Containers provide reproducible execution, not source, Git, credentials, worktrees, or agent-session state. ([details](modules/environment/conventions/environment/README.md))
 - **ENV-002 — Use Docker Compose as the canonical local development and test topology** — Define required local services in Compose and reuse those definitions across development and tests. ([details](modules/environment/conventions/environment/README.md))
 - **ENV-003 — .env.example is the committed environment contract** — Keep .env local and uncommitted; commit a secret-free .env.example covering supported setup. ([details](modules/environment/conventions/environment/README.md))
@@ -131,20 +129,6 @@ Read this section first. Open the linked managed source when a rule is relevant,
 - **TS-004 — Use strict compiler options that expose missing-state mistakes** — Enable `strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noImplicitOverride`, and `noFallthroughCasesInSwitch` by default. ([details](modules/typescript/technologies/typescript/README.md))
 - **TS-005 — Handle closed variants exhaustively** — Switches over enums and discriminated unions owned by the application should be exhaustive so adding a new variant produces a deterministic failure until callers handle it. ([details](modules/typescript/technologies/typescript/README.md))
 - **TS-006 — Do not leave promises unobserved** — Await or return promises by default. ([details](modules/typescript/technologies/typescript/README.md))
-- **REACT-001 — Colocate components and directly related artifacts** — Keep a component and its focused tests, styles, hooks, and types in their smallest shared directory. ([details](modules/react/technologies/typescript/react/README.md))
-- **REACT-002 — Keep React state local by default** — Own state in the smallest subtree that needs it; widen only for real shared ownership. ([details](modules/react/technologies/typescript/react/README.md))
-- **REACT-003 — Put important navigational state in URL query parameters** — Put durable, shareable view state in query parameters; keep ephemeral and sensitive state out of URLs. ([details](modules/react/technologies/typescript/react/README.md))
-- **REACT-004 — Use effects for external synchronization** — Use effects for systems outside React, not derived values or ordinary control flow. ([details](modules/react/technologies/typescript/react/README.md))
-- **REACT-005 — Prefer composition over highly configurable mega-components** — Prefer focused composition over unrelated flags and modes. ([details](modules/react/technologies/typescript/react/README.md))
-- **REACT-006 — Keep component boundaries structurally clear** — Names, directories, props, and immediate dependencies must make a component's purpose locally understandable. ([details](modules/react/technologies/typescript/react/README.md))
-- **REACT-007 — Reuse shared UI before creating local primitives** — Inspect and reuse the established UI package before creating local primitives. ([details](modules/react/technologies/typescript/react/README.md))
-- **RTL-001 — Test observable user behavior** — Interact through user-facing controls and assert observable outcomes, not React internals. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
-- **RTL-002 — Use Testing Library's semantic query APIs** — Apply TEST-020 through Testing Library's user-facing query APIs, preferring roles with accessible names, then labels and visible text where appropriate. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
-- **RTL-003 — Apply DOM testing progressively** — Do not require a React Testing Library test merely because a React component exists. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
-- **RTL-004 — Model interactions through user events** — Prefer `userEvent.setup()` and awaited user interactions for normal input, pointer, and keyboard behavior. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
-- **RTL-005 — Wait for observable asynchronous state** — Wait for the state the user can observe with semantic async queries or bounded waiting helpers. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
-- **RTL-006 — Keep component composition real by default** — Prefer rendering real child components and providers over mocking React implementation boundaries. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
-- **RTL-007 — Avoid snapshot-only and duplicate confidence** — Prefer explicit behavioral assertions over broad DOM snapshots. Use small snapshots only when the serialized or rendered shape is itself a meaningful contract. ([details](modules/testing-library/technologies/typescript/react/testing-library/README.md))
 - **UI-001 — Use surfaces to communicate structure, not to decorate every section** — Use raised surfaces for meaningful semantic units; otherwise use hierarchy, spacing, headings, separators, lists, tables, or rows. ([details](modules/ui/conventions/interface-design/README.md))
 - **UI-002 — Show information where it changes a decision** — Give prominence only to information that changes understanding or next action; do not repeat facts already visible. ([details](modules/ui/conventions/interface-design/README.md))
 - **UI-003 — Treat theme preference as a product contract** — Support light, dark, and system modes unless explicitly opted out. ([details](modules/ui/conventions/interface-design/README.md))
@@ -152,11 +136,6 @@ Read this section first. Open the linked managed source when a rule is relevant,
 - **UI-005 — Make primary workflows keyboard-first and commands discoverable** — Make every primary workflow keyboard-completable. ([details](modules/ui/conventions/interface-design/README.md))
 - **UI-006 — Make interactive data views accessible and shareable** — Use charts only when interaction adds understanding; provide equivalent structured values. ([details](modules/ui/conventions/interface-design/README.md))
 - **UI-007 — Make primary workflows work on touch and mobile** — Preserve primary tasks, hierarchy, state, and required actions on representative mobile and touch input. ([details](modules/ui/conventions/interface-design/README.md))
-- **BUN-001 — Use Bun as the default JavaScript toolchain** — Use Bun for packages, scripts, and JavaScript/TypeScript where required tooling supports it. ([details](modules/tooling/technologies/tooling/README.md))
-- **TAILWIND-001 — Prefer Tailwind CSS when practical** — Prefer Tailwind for application styling when utility classes preserve ownership near the markup. ([details](modules/tooling/technologies/tooling/README.md))
-- **TAILWIND-002 — Use semantic tokens and named variants** — Use semantic tokens and named variants for visual decisions. ([details](modules/tooling/technologies/tooling/README.md))
-- **VITEST-001 — Separate execution kinds with names and scripts** — Keep tests at their dependency scope; encode kind in filenames such as .unit.test.ts, .integration.test.ts, or .bench.ts. ([details](modules/vitest/technologies/tooling/vitest/README.md))
-- **VITEST-002 — Do not commit focused or silently disabled tests** — Focused tests such as `test.only`/`describe.only` fail deterministic verification. ([details](modules/vitest/technologies/tooling/vitest/README.md))
 
 ## Installed modules
 
@@ -180,14 +159,6 @@ Read this section first. Open the linked managed source when a rule is relevant,
 
 - [modules/dependencies/conventions/dependencies/README.md](modules/dependencies/conventions/dependencies/README.md)
 
-### docker
-
-- [modules/docker/technologies/docker/README.md](modules/docker/technologies/docker/README.md)
-
-### dockerfile
-
-- [modules/dockerfile/technologies/docker/dockerfile/README.md](modules/dockerfile/technologies/docker/dockerfile/README.md)
-
 ### environment
 
 - [modules/environment/conventions/environment/README.md](modules/environment/conventions/environment/README.md)
@@ -205,42 +176,12 @@ Read this section first. Open the linked managed source when a rule is relevant,
 - [modules/typescript/technologies/typescript/TS-005.json](modules/typescript/technologies/typescript/TS-005.json)
 - [modules/typescript/technologies/typescript/TS-006.json](modules/typescript/technologies/typescript/TS-006.json)
 
-### react
-
-- [modules/react/technologies/typescript/react/README.md](modules/react/technologies/typescript/react/README.md)
-- [modules/react/technologies/typescript/react/REACT-004.json](modules/react/technologies/typescript/react/REACT-004.json)
-
-### testing-library
-
-- [modules/testing-library/technologies/typescript/react/testing-library/README.md](modules/testing-library/technologies/typescript/react/testing-library/README.md)
-
 ### ui
 
 - [modules/ui/conventions/interface-design/README.md](modules/ui/conventions/interface-design/README.md)
-
-### tooling
-
-- [modules/tooling/technologies/tooling/README.md](modules/tooling/technologies/tooling/README.md)
-- [modules/tooling/technologies/tooling/BUN-001.json](modules/tooling/technologies/tooling/BUN-001.json)
-
-### vite
-
-- [modules/vite/technologies/tooling/vite/README.md](modules/vite/technologies/tooling/vite/README.md)
-
-### vitest
-
-- [modules/vitest/technologies/tooling/vitest/README.md](modules/vitest/technologies/tooling/vitest/README.md)
-- [modules/vitest/technologies/tooling/vitest/VITEST-001.json](modules/vitest/technologies/tooling/vitest/VITEST-001.json)
-- [modules/vitest/technologies/tooling/vitest/VITEST-002.json](modules/vitest/technologies/tooling/vitest/VITEST-002.json)
 
 ## Companion configuration assets
 
 ### typescript
 
 - [modules/typescript/technologies/typescript/TS-003.oxlint.json](modules/typescript/technologies/typescript/TS-003.oxlint.json)
-
-### react
-
-- [modules/react/technologies/typescript/react/generators/react-component/generator.json](modules/react/technologies/typescript/react/generators/react-component/generator.json)
-- [modules/react/technologies/typescript/react/generators/react-component/templates/Component.tsx.tmpl](modules/react/technologies/typescript/react/generators/react-component/templates/Component.tsx.tmpl)
-- [modules/react/technologies/typescript/react/generators/react-component/templates/index.ts.tmpl](modules/react/technologies/typescript/react/generators/react-component/templates/index.ts.tmpl)

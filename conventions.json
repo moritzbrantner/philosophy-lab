@@ -3,14 +3,9 @@
   "registry": "coding-agent-conventions",
   "modules": [
     "dependencies",
-    "dockerfile",
     "environment",
     "git",
-    "react",
-    "testing-library",
     "typescript",
-    "ui",
-    "vite",
-    "vitest"
+    "ui"
   ]
 }
