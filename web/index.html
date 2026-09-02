@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive exhibits for philosophical arguments, paradoxes, thought experiments, and viewpoints."
+    />
+    <title>Philosophy Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Philosophy Lab home">Philosophy Lab</a>
+      <nav aria-label="Primary navigation">
+        <a href="#exhibit">Exhibit</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#principles">Principles</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Small ideas · explicit structure · interactive presentation</p>
+        <h1 id="hero-title">Take philosophical arguments apart without turning them into a worldview.</h1>
+        <p class="hero-copy">
+          Philosophy Lab is a collection of focused exhibits: arguments, paradoxes, distinctions,
+          thought experiments, objections, replies, and competing viewpoints. Each exhibit can use
+          the representation that makes its particular idea easiest to inspect.
+        </p>
+        <div class="hero-links">
+          <a class="primary-link" href="#exhibit">Open the first exhibit</a>
+          <a href="#principles">Why a lab?</a>
+        </div>
+      </section>
+
+      <section id="exhibit" class="exhibit-shell" aria-labelledby="exhibit-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Exhibit 001 · Argument anatomy</p>
+            <h2 id="exhibit-title">When does a conclusion remain supported?</h2>
+          </div>
+          <span class="status-chip">Interactive</span>
+        </div>
+
+        <p class="section-intro">
+          Toggle the premises of a classical syllogism. The lab reports only whether the conclusion
+          is supported <em>by this argument</em>; it does not declare a premise or conclusion true.
+        </p>
+
+        <div id="argument-claims" class="claim-stack" aria-live="polite"></div>
+
+        <aside class="support-panel" aria-labelledby="support-title">
+          <p class="eyebrow">Current result</p>
+          <h3 id="support-title">Argument support</h3>
+          <p id="support-status" class="support-status"></p>
+          <p id="support-detail" class="support-detail"></p>
+        </aside>
+      </section>
+
+      <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Next specimens</p>
+            <h2 id="catalog-title">A lab grows exhibit by exhibit.</h2>
+          </div>
+        </div>
+        <div id="exhibit-catalog" class="catalog-grid"></div>
+      </section>
+
+      <section id="principles" class="principles" aria-labelledby="principles-title">
+        <p class="eyebrow">Repository boundary</p>
+        <h2 id="principles-title">Local reasoning first.</h2>
+        <div class="principle-grid">
+          <article>
+            <span>01</span>
+            <h3>Exhibits before ontology</h3>
+            <p>Let repeated philosophical presentations reveal the abstractions worth sharing.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Support is not truth</h3>
+            <p>Make inferential dependencies visible without pretending the interface settles the premises.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Promote proven patterns</h3>
+            <p>Useful primitives may later inform worldview-lab or truth-core, but experiments start here.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Philosophy Lab · an experimental presentation layer for small philosophical objects.</p>
+    </footer>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
