@@ -40,12 +40,38 @@ jobs:
           bun-version: 1.4.0
           install-mode: none
 
+      - name: Capture TS-005 failure evidence
+        if: failure()
+        shell: bash
+        run: |
+          mkdir -p .artifacts/coding-tooling
+          cat > /tmp/ts-005.json <<'JSON'
+          {
+            "options": {
+              "typeAware": true
+            },
+            "rules": {
+              "typescript/switch-exhaustiveness-check": [
+                "error",
+                {
+                  "considerDefaultExhaustiveForUnions": false
+                }
+              ]
+            }
+          }
+          JSON
+          set +e
+          ./node_modules/.bin/oxlint --config /tmp/ts-005.json . > .artifacts/coding-tooling/ts-005.txt 2>&1
+          status=$?
+          set -e
+          printf '\nexit_code=%s\n' "$status" >> .artifacts/coding-tooling/ts-005.txt
+
       - name: Preserve conformance failure evidence
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: conformance-report
-          path: .artifacts/coding-tooling/report.json
+          path: .artifacts/coding-tooling
           if-no-files-found: error
 
       - name: Check deterministic findings
