@@ -52,7 +52,8 @@ export function conclusionSupport(
 ): SupportStatus {
   const conclusion = argument.claims.find((claim) => claim.id === conclusionId);
   if (!conclusion) throw new Error(`Unknown conclusion: ${conclusionId}`);
-  if (conclusion.role !== "conclusion") throw new Error(`Claim is not a conclusion: ${conclusionId}`);
+  if (conclusion.role !== "conclusion")
+    throw new Error(`Claim is not a conclusion: ${conclusionId}`);
 
   const missingPremiseIds = (conclusion.dependsOn ?? []).filter(
     (premiseId) => state[premiseId] !== true,

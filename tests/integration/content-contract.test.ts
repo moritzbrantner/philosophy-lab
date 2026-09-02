@@ -8,10 +8,10 @@ test("the page exposes the landmarks required by the interactive exhibit", async
   const html = await readFile(new URL("../../web/index.html", import.meta.url), "utf8");
 
   for (const requiredFragment of [
-    "<main id=\"top\">",
-    "id=\"argument-claims\"",
-    "id=\"support-status\"",
-    "id=\"exhibit-catalog\"",
+    '<main id="top">',
+    'id="argument-claims"',
+    'id="support-status"',
+    'id="exhibit-catalog"',
   ]) {
     expect(html).toContain(requiredFragment);
   }

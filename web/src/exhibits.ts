@@ -42,11 +42,13 @@ export const plannedExhibits: readonly PlannedExhibit[] = [
   {
     title: "A Gettier case",
     family: "epistemology",
-    description: "Separate truth, belief, justification, and the intuition that something is still missing.",
+    description:
+      "Separate truth, belief, justification, and the intuition that something is still missing.",
   },
   {
     title: "The trolley problem",
     family: "ethics",
-    description: "Vary a small thought experiment and compare what different moral considerations track.",
+    description:
+      "Vary a small thought experiment and compare what different moral considerations track.",
   },
 ];
