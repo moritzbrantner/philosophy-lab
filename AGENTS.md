@@ -26,6 +26,16 @@ It is intentionally narrower than `worldview-lab` and less formal than `truth-co
 - Avoid hidden global state. URL/shareable state can be introduced when an exhibit needs it.
 - Prefer small modules with explicit data flow over framework-shaped abstractions.
 
+## Initial UI convention exceptions
+
+The repository installs the shared `ui` convention module, but the foundation intentionally opts out of three broad application defaults while the exhibit/content model is still being discovered:
+
+- **UI-003 theme preference:** the foundation is light-only. Add light/dark/system modes with persisted explicit choice once the visual system is reused by multiple implemented exhibits.
+- **UI-004 localization:** the foundation is English-only. Add `en`, `de`, and `es` together once exhibit copy has a stable content boundary rather than embedding a premature translation architecture into the first specimen.
+- **UI-006 shareable state:** premise-toggle state is local-only in the first exhibit. Make durable non-sensitive exhibit state URL-addressable once a second interactive exhibit establishes the state contract.
+
+These are explicit repository-level exceptions, not silent defaults. Remove each exception when its trigger is reached; do not let a temporary foundation constraint become accidental permanent policy.
+
 ## Commands
 
 ```bash
