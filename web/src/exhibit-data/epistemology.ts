@@ -21,7 +21,8 @@ export const epistemologyExhibits = [
       {
         id: "not-knowledge",
         label: "No — luck defeats knowledge",
-        summary: "Justified true belief is not enough when the belief is true only by epistemic luck.",
+        summary:
+          "Justified true belief is not enough when the belief is true only by epistemic luck.",
         commitment:
           "Knowledge requires an additional anti-luck, reliability, safety, or causal condition connecting belief to truth.",
         challenge:
@@ -30,7 +31,8 @@ export const epistemologyExhibits = [
       {
         id: "depends-on-justification",
         label: "Reconsider the justification",
-        summary: "Perhaps the unusual environment undermines justification rather than revealing a fourth condition on knowledge.",
+        summary:
+          "Perhaps the unusual environment undermines justification rather than revealing a fourth condition on knowledge.",
         commitment:
           "The lesson may concern how justification depends on reliability or defeaters, not merely the definition of knowledge.",
         challenge:
@@ -46,14 +48,16 @@ export const epistemologyExhibits = [
     id: "brain-in-vat",
     title: "Brain in a vat",
     family: "epistemology",
-    question: "If your experiences could be perfectly simulated, what can you know about the external world?",
+    question:
+      "If your experiences could be perfectly simulated, what can you know about the external world?",
     setup:
       "Imagine that your brain is sustained in a vat and fed signals that generate experiences exactly like your present life. From the inside, everything appears unchanged.",
     options: [
       {
         id: "skeptical",
         label: "Radical skepticism follows",
-        summary: "If experience cannot distinguish the scenarios, ordinary external-world beliefs lack the certainty we thought they had.",
+        summary:
+          "If experience cannot distinguish the scenarios, ordinary external-world beliefs lack the certainty we thought they had.",
         commitment:
           "Knowledge requires ruling out skeptical alternatives, and sensory evidence alone cannot rule this one out.",
         challenge:
@@ -62,7 +66,8 @@ export const epistemologyExhibits = [
       {
         id: "ordinary-knowledge",
         label: "Ordinary knowledge survives",
-        summary: "Knowledge can be fallible and need not exclude every far-fetched skeptical possibility.",
+        summary:
+          "Knowledge can be fallible and need not exclude every far-fetched skeptical possibility.",
         commitment:
           "Context, reliability, or entitlement can justify ordinary external-world claims without absolute certainty.",
         challenge:
@@ -71,7 +76,8 @@ export const epistemologyExhibits = [
       {
         id: "semantic-reply",
         label: "Question the hypothesis itself",
-        summary: "Externalist theories of meaning may limit whether a lifelong envatted speaker can truly mean the same thing by 'vat' or 'brain'.",
+        summary:
+          "Externalist theories of meaning may limit whether a lifelong envatted speaker can truly mean the same thing by 'vat' or 'brain'.",
         commitment:
           "Thought and reference partly depend on causal relations with the environment, not solely on inner experience.",
         challenge:
