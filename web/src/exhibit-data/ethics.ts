@@ -30,7 +30,8 @@ export const ethicsExhibits = [
       {
         id: "depends",
         label: "The details matter",
-        summary: "Intent, causal structure, responsibility for the threat, and uncertainty may change the judgment.",
+        summary:
+          "Intent, causal structure, responsibility for the threat, and uncertainty may change the judgment.",
         commitment:
           "The case is useful precisely because small variations reveal which moral features your judgment tracks.",
         challenge:
@@ -46,14 +47,16 @@ export const ethicsExhibits = [
     id: "trolley-footbridge",
     title: "Trolley problem: the footbridge",
     family: "ethics",
-    question: "May you push one person from a footbridge if doing so will stop a trolley and save five?",
+    question:
+      "May you push one person from a footbridge if doing so will stop a trolley and save five?",
     setup:
       "The trolley again threatens five people. This time there is no switch. A large bystander on a bridge could stop the trolley if pushed into its path, but the bystander would die.",
     options: [
       {
         id: "push",
         label: "Push the bystander",
-        summary: "If saving the greater number justified the switch, consistency may seem to favor pushing too.",
+        summary:
+          "If saving the greater number justified the switch, consistency may seem to favor pushing too.",
         commitment:
           "Aggregate consequences dominate the moral comparison when the expected outcomes are otherwise fixed.",
         challenge:
@@ -62,7 +65,8 @@ export const ethicsExhibits = [
       {
         id: "do-not-push",
         label: "Do not push",
-        summary: "Using a person as a lethal means violates a constraint that the switch case may not violate.",
+        summary:
+          "Using a person as a lethal means violates a constraint that the switch case may not violate.",
         commitment:
           "Intention, personal force, rights, or the means/side-effect distinction can matter independently of body count.",
         challenge:
@@ -71,7 +75,8 @@ export const ethicsExhibits = [
       {
         id: "same-as-switch",
         label: "Treat it like the switch",
-        summary: "The apparent psychological difference may not mark a morally relevant distinction.",
+        summary:
+          "The apparent psychological difference may not mark a morally relevant distinction.",
         commitment:
           "A sound principle should not change merely because one case feels more vivid, direct, or emotionally difficult.",
         challenge:
@@ -94,11 +99,11 @@ export const ethicsExhibits = [
       {
         id: "never-kill",
         label: "No — do not kill",
-        summary: "A person may not be intentionally killed and used merely as a resource for others.",
+        summary:
+          "A person may not be intentionally killed and used merely as a resource for others.",
         commitment:
           "Rights, justice, professional duties, or constraints on intentional harm limit what aggregate welfare can justify.",
-        challenge:
-          "The decision knowingly permits five deaths that could physically be prevented.",
+        challenge: "The decision knowingly permits five deaths that could physically be prevented.",
       },
       {
         id: "save-five",
@@ -112,7 +117,8 @@ export const ethicsExhibits = [
       {
         id: "distinguish-case",
         label: "Reject the forced comparison",
-        summary: "The surgeon's role, consent, institutional rules, and using a person as a means make this unlike a simple numbers problem.",
+        summary:
+          "The surgeon's role, consent, institutional rules, and using a person as a means make this unlike a simple numbers problem.",
         commitment:
           "Moral evaluation can depend on relationships and action structure, not just final totals.",
         challenge:
@@ -128,14 +134,16 @@ export const ethicsExhibits = [
     id: "experience-machine",
     title: "The experience machine",
     family: "ethics",
-    question: "Would you permanently plug into a machine that gives you the happiest possible life-experience?",
+    question:
+      "Would you permanently plug into a machine that gives you the happiest possible life-experience?",
     setup:
       "The machine can generate experiences indistinguishable from reality. Once connected, you would believe you are loving, creating, succeeding, and living a rich life, even though your body remains in the machine.",
     options: [
       {
         id: "plug-in",
         label: "Plug in",
-        summary: "If lived experience is what ultimately matters for well-being, the machine can supply it.",
+        summary:
+          "If lived experience is what ultimately matters for well-being, the machine can supply it.",
         commitment:
           "Pleasure, satisfaction, or the quality of conscious experience may be sufficient for a good life.",
         challenge:
@@ -144,7 +152,8 @@ export const ethicsExhibits = [
       {
         id: "stay-out",
         label: "Stay in reality",
-        summary: "Authenticity, achievement, relationships, or contact with reality matter in addition to experience.",
+        summary:
+          "Authenticity, achievement, relationships, or contact with reality matter in addition to experience.",
         commitment:
           "Well-being contains objective or reality-involving goods that cannot be replaced by an internally identical simulation.",
         challenge:
@@ -153,7 +162,8 @@ export const ethicsExhibits = [
       {
         id: "depends-on-terms",
         label: "It depends on the terms",
-        summary: "Reversibility, existing relationships, risk, and what counts as personal continuity may alter the choice.",
+        summary:
+          "Reversibility, existing relationships, risk, and what counts as personal continuity may alter the choice.",
         commitment:
           "The thought experiment tests several values at once, so variants should separate welfare from fear of loss or status-quo bias.",
         challenge:
@@ -194,7 +204,8 @@ export const ethicsExhibits = [
       {
         id: "false-dilemma",
         label: "Reject the dilemma",
-        summary: "Goodness may be grounded in divine nature rather than in arbitrary commands or an external standard.",
+        summary:
+          "Goodness may be grounded in divine nature rather than in arbitrary commands or an external standard.",
         commitment:
           "A necessarily good nature can be treated as the source of moral normativity while commands express that nature.",
         challenge:
@@ -210,14 +221,16 @@ export const ethicsExhibits = [
     id: "problem-of-evil",
     title: "The problem of evil",
     family: "ethics",
-    question: "How should apparently pointless suffering affect belief in an all-powerful, all-knowing, perfectly good God?",
+    question:
+      "How should apparently pointless suffering affect belief in an all-powerful, all-knowing, perfectly good God?",
     setup:
       "The world contains moral and natural suffering. The philosophical problem asks whether that suffering is logically incompatible with such a God, strong evidence against such a God, or compatible with reasons humans may only partly understand.",
     options: [
       {
         id: "evidence-against",
         label: "It is strong evidence against",
-        summary: "The amount and kinds of apparently gratuitous suffering lower the probability of perfect providence.",
+        summary:
+          "The amount and kinds of apparently gratuitous suffering lower the probability of perfect providence.",
         commitment:
           "Even if evil is not a strict contradiction, we should expect a perfectly good and powerful creator to prevent much more suffering than we observe.",
         challenge:
@@ -226,7 +239,8 @@ export const ethicsExhibits = [
       {
         id: "defense-theodicy",
         label: "There can be morally sufficient reasons",
-        summary: "Freedom, stable natural order, soul-making, or other goods may require the possibility or permission of suffering.",
+        summary:
+          "Freedom, stable natural order, soul-making, or other goods may require the possibility or permission of suffering.",
         commitment:
           "Some valuable worlds may be impossible to realize without serious risks, costs, or creaturely freedom.",
         challenge:
@@ -235,7 +249,8 @@ export const ethicsExhibits = [
       {
         id: "epistemic-humility",
         label: "Suspend the inference",
-        summary: "Human limits may make us poor judges of whether apparently pointless suffering truly lacks sufficient reason.",
+        summary:
+          "Human limits may make us poor judges of whether apparently pointless suffering truly lacks sufficient reason.",
         commitment:
           "An inference from 'I can see no adequate reason' to 'there is no adequate reason' may be unreliable in this domain.",
         challenge:
