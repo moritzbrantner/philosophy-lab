@@ -7,7 +7,7 @@
     "dev": "bun web/index.html --console",
     "build": "rm -rf dist && bun build web/index.html --outdir=dist --target=browser",
     "format": "oxfmt web/src tests package.json tsconfig.json .coding-tooling.json .coding-tooling.expectations.json renovate.json .devcontainer/devcontainer.json",
-    "format:check": "oxfmt web/src/exhibit-data tests/integration/content-contract.test.ts && git diff -- web/src/exhibit-data tests/integration/content-contract.test.ts && exit 1",
+    "format:check": "oxfmt --check web/src tests package.json tsconfig.json .coding-tooling.json .coding-tooling.expectations.json renovate.json .devcontainer/devcontainer.json",
     "lint": "oxlint web/src tests",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "bun test tests/unit",
