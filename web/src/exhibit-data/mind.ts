@@ -21,7 +21,8 @@ export const mindExhibits = [
       {
         id: "system-understands",
         label: "Yes — the system can understand",
-        summary: "Understanding belongs to the organized system, not necessarily to the rule-following individual component.",
+        summary:
+          "Understanding belongs to the organized system, not necessarily to the rule-following individual component.",
         commitment:
           "Mental properties can emerge at a level above the parts that implement the computation.",
         challenge:
@@ -30,7 +31,8 @@ export const mindExhibits = [
       {
         id: "embodiment-matters",
         label: "Computation may need embodiment",
-        summary: "Symbol processing could support understanding when embedded in perception, action, learning, and a world.",
+        summary:
+          "Symbol processing could support understanding when embedded in perception, action, learning, and a world.",
         commitment:
           "The room is too isolated to model the causal and embodied grounding that real intelligence may require.",
         challenge:
@@ -62,7 +64,8 @@ export const mindExhibits = [
       {
         id: "new-ability",
         label: "No new fact — a new ability",
-        summary: "Mary gains abilities such as recognizing, imagining, or remembering red without learning a nonphysical fact.",
+        summary:
+          "Mary gains abilities such as recognizing, imagining, or remembering red without learning a nonphysical fact.",
         commitment:
           "Complete physical knowledge can remain complete even though first-person experience supplies new practical or recognitional capacities.",
         challenge:
@@ -71,7 +74,8 @@ export const mindExhibits = [
       {
         id: "new-mode",
         label: "Same fact, new mode of access",
-        summary: "Mary encounters old physical facts under a new phenomenal concept or presentation.",
+        summary:
+          "Mary encounters old physical facts under a new phenomenal concept or presentation.",
         commitment:
           "A difference in how a fact is represented need not imply a difference in which facts exist.",
         challenge:
