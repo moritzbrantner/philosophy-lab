@@ -30,7 +30,8 @@ export const freeWillExhibits = [
       {
         id: "hard-determinist",
         label: "Hard determinism",
-        summary: "Determinism is true and rules out free will in the responsibility-grounding sense.",
+        summary:
+          "Determinism is true and rules out free will in the responsibility-grounding sense.",
         commitment:
           "Traditional desert-based responsibility should be revised or rejected if nobody ultimately could have acted otherwise or authored themselves independently of prior causes.",
         challenge:
@@ -62,7 +63,8 @@ export const freeWillExhibits = [
       {
         id: "not-responsible",
         label: "Jones is not responsible",
-        summary: "Responsibility requires a robust alternative or stronger control than the case allows.",
+        summary:
+          "Responsibility requires a robust alternative or stronger control than the case allows.",
         commitment:
           "A person is not fully responsible when the surrounding setup guarantees the same outcome no matter what the person tries to do.",
         challenge:
@@ -71,7 +73,8 @@ export const freeWillExhibits = [
       {
         id: "case-underdetermined",
         label: "The case is underdetermined",
-        summary: "Whether Jones is responsible depends on how Black can detect and control the decision.",
+        summary:
+          "Whether Jones is responsible depends on how Black can detect and control the decision.",
         commitment:
           "Details about the intervention mechanism may determine whether Jones retains flickers of freedom, sourcehood, or reasons-responsive control.",
         challenge:
@@ -87,14 +90,16 @@ export const freeWillExhibits = [
     id: "consequence-argument",
     title: "The consequence argument",
     family: "free-will",
-    question: "If the past and laws are beyond your control, are their determined consequences beyond your control too?",
+    question:
+      "If the past and laws are beyond your control, are their determined consequences beyond your control too?",
     setup:
       "Assume determinism. You did not choose the remote past or the laws of nature. Your present action follows from those facts. Does control transfer through that entailment?",
     options: [
       {
         id: "accept",
         label: "Yes — this threatens freedom",
-        summary: "If nobody controls the past or laws, nobody controls their inevitable consequences in the needed sense.",
+        summary:
+          "If nobody controls the past or laws, nobody controls their inevitable consequences in the needed sense.",
         commitment:
           "The argument supports incompatibilism: determinism would prevent the kind of alternative possibility or control required for free will.",
         challenge:
