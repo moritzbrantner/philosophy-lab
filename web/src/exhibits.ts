@@ -1,4 +1,10 @@
 import type { ArgumentDefinition } from "./argument-state.ts";
+import { epistemologyExhibits } from "./exhibit-data/epistemology.ts";
+import { ethicsExhibits } from "./exhibit-data/ethics.ts";
+import { freeWillExhibits } from "./exhibit-data/free-will.ts";
+import { identityExhibits } from "./exhibit-data/identity.ts";
+import { justiceExhibits } from "./exhibit-data/justice.ts";
+import { mindExhibits } from "./exhibit-data/mind.ts";
 
 export const argumentAnatomy: ArgumentDefinition = {
   id: "argument-anatomy",
@@ -27,28 +33,11 @@ export const argumentAnatomy: ArgumentDefinition = {
   ],
 };
 
-export type PlannedExhibit = {
-  readonly title: string;
-  readonly family: "paradox" | "epistemology" | "ethics";
-  readonly description: string;
-};
-
-export const plannedExhibits: readonly PlannedExhibit[] = [
-  {
-    title: "Ship of Theseus",
-    family: "paradox",
-    description: "Compare competing criteria of identity as a thing changes piece by piece.",
-  },
-  {
-    title: "A Gettier case",
-    family: "epistemology",
-    description:
-      "Separate truth, belief, justification, and the intuition that something is still missing.",
-  },
-  {
-    title: "The trolley problem",
-    family: "ethics",
-    description:
-      "Vary a small thought experiment and compare what different moral considerations track.",
-  },
-];
+export const choiceExhibits = [
+  ...freeWillExhibits,
+  ...ethicsExhibits,
+  ...epistemologyExhibits,
+  ...mindExhibits,
+  ...identityExhibits,
+  ...justiceExhibits,
+] as const;
