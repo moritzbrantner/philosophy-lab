@@ -14,8 +14,8 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Philosophy Lab home">Philosophy Lab</a>
       <nav aria-label="Primary navigation">
-        <a href="#exhibit">Exhibit</a>
-        <a href="#catalog">Catalog</a>
+        <a href="#exhibit">Argument</a>
+        <a href="#choice-lab">Problems</a>
         <a href="#principles">Principles</a>
       </nav>
     </header>
@@ -23,15 +23,15 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <p class="eyebrow">Small ideas · explicit structure · interactive presentation</p>
-        <h1 id="hero-title">Take philosophical arguments apart without turning them into a worldview.</h1>
+        <h1 id="hero-title">Philosophy is easier to inspect when you can make the choice yourself.</h1>
         <p class="hero-copy">
-          Philosophy Lab is a collection of focused exhibits: arguments, paradoxes, distinctions,
-          thought experiments, objections, replies, and competing viewpoints. Each exhibit can use
-          the representation that makes its particular idea easiest to inspect.
+          Philosophy Lab turns classic arguments and thought experiments into small interactive exhibits.
+          Pick a position, inspect what it commits you to, and see the pressure point without pretending
+          that the interface has settled the debate.
         </p>
         <div class="hero-links">
-          <a class="primary-link" href="#exhibit">Open the first exhibit</a>
-          <a href="#principles">Why a lab?</a>
+          <a class="primary-link" href="#choice-lab">Explore 18 classic problems</a>
+          <a href="#exhibit">Start with argument structure</a>
         </div>
       </section>
 
@@ -59,14 +59,44 @@
         </aside>
       </section>
 
-      <section id="catalog" class="catalog" aria-labelledby="catalog-title">
-        <div class="section-heading">
+      <section id="choice-lab" class="choice-lab" aria-labelledby="choice-lab-title">
+        <div class="section-heading choice-lab-heading">
           <div>
-            <p class="eyebrow">Next specimens</p>
-            <h2 id="catalog-title">A lab grows exhibit by exhibit.</h2>
+            <p class="eyebrow">Interactive collection · 18 classic problems</p>
+            <h2 id="choice-lab-title">Choose a position, then inspect its commitments.</h2>
           </div>
+          <span class="status-chip">No scoring</span>
         </div>
-        <div id="exhibit-catalog" class="catalog-grid"></div>
+        <p class="section-intro">
+          These are deliberately compact entry points, not verdicts. Each option states a recognizable
+          philosophical direction and one pressure point that keeps the problem open.
+        </p>
+
+        <div id="family-filters" class="family-filters" aria-label="Filter exhibits by topic"></div>
+
+        <div class="choice-layout">
+          <aside class="choice-catalog-shell" aria-label="Classic philosophy problems">
+            <div id="choice-catalog" class="choice-catalog"></div>
+          </aside>
+
+          <article class="choice-stage" aria-labelledby="choice-title">
+            <p id="choice-meta" class="eyebrow"></p>
+            <h3 id="choice-title" class="choice-title"></h3>
+            <p id="choice-setup" class="choice-setup"></p>
+
+            <section class="choice-question-panel" aria-labelledby="choice-question">
+              <h4 id="choice-question"></h4>
+              <div id="choice-options" class="choice-options"></div>
+            </section>
+
+            <aside id="choice-result" class="choice-result" aria-live="polite"></aside>
+
+            <p class="reference-line">
+              <span>Reference:</span>
+              <a id="choice-reference" rel="noreferrer"></a>
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="principles" class="principles" aria-labelledby="principles-title">
@@ -80,8 +110,8 @@
           </article>
           <article>
             <span>02</span>
-            <h3>Support is not truth</h3>
-            <p>Make inferential dependencies visible without pretending the interface settles the premises.</p>
+            <h3>Choice is not endorsement</h3>
+            <p>Represent competing answers fairly and expose both commitments and objections.</p>
           </article>
           <article>
             <span>03</span>
