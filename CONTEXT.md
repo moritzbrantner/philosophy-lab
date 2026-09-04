@@ -14,13 +14,20 @@ A successful pattern may move downstream, but Philosophy Lab does not need to sh
 
 ## Current architecture
 
-The initial application is a static TypeScript browser site built directly by Bun. There are no runtime or application package dependencies. Exact-version developer tools are invoked through Bun so the lockfile remains small and the repository stays cheap for agents to enter.
+The application is a static TypeScript browser site built directly by Bun. There are no runtime or application package dependencies. Exact-version developer tools are invoked through Bun so the lockfile remains small and the repository stays cheap for agents to enter.
 
-The first reusable domain primitive is deliberately tiny: an `ArgumentDefinition` containing claims and explicit premise dependencies for a conclusion. It is sufficient to demonstrate premise toggles and the distinction between "supported by this argument" and "true".
+Two deliberately narrow reusable primitives now exist:
 
-## Current exhibit
+- `ArgumentDefinition` contains claims and explicit premise dependencies for a conclusion. It demonstrates premise toggles and the distinction between "supported by this argument" and "true".
+- `ChoiceExhibit` supports thought experiments whose useful interaction is a compact question with two to four recognizable positions. Each option explains a commitment and a pressure point. It is not a universal philosophy schema and should not absorb exhibits that need a different representation.
 
-`Argument anatomy` uses the classical Socrates syllogism. Visitors can accept or reject each premise and see whether the conclusion remains supported by that argument. This is a presentation experiment, not a general-purpose theorem prover.
+## Current exhibits
+
+`Argument anatomy` uses the classical Socrates syllogism. Visitors can accept or reject each premise and see whether the conclusion remains supported by that argument.
+
+The classic-problems collection contains 18 interactive choice exhibits across free will and responsibility, ethics, knowledge and skepticism, mind and consciousness, identity and vagueness, and justice and decision theory. Named cases include Frankfurt cases, trolley variants, Gettier-style epistemic luck, the Chinese room, Mary's room, the Ship of Theseus, the sorites paradox, the prisoner's dilemma, and the veil of ignorance. Each exhibit links to a reference source.
+
+The currently selected choice exhibit and answer are URL-addressable so non-sensitive interactive state can be shared without introducing an application framework.
 
 ## Infrastructure
 
