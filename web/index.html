@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive exhibits for philosophical arguments, paradoxes, thought experiments, and viewpoints."
+    />
+    <title>Philosophy Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Philosophy Lab home">Philosophy Lab</a>
+      <nav aria-label="Primary navigation">
+        <a href="#exhibit">Argument</a>
+        <a href="#choice-lab">Problems</a>
+        <a href="#principles">Principles</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Small ideas · explicit structure · interactive presentation</p>
+        <h1 id="hero-title">Philosophy is easier to inspect when you can make the choice yourself.</h1>
+        <p class="hero-copy">
+          Philosophy Lab turns classic arguments and thought experiments into small interactive exhibits.
+          Pick a position, inspect what it commits you to, and see the pressure point without pretending
+          that the interface has settled the debate.
+        </p>
+        <div class="hero-links">
+          <a class="primary-link" href="#choice-lab">Explore 18 classic problems</a>
+          <a href="#exhibit">Start with argument structure</a>
+        </div>
+      </section>
+
+      <section id="exhibit" class="exhibit-shell" aria-labelledby="exhibit-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Exhibit 001 · Argument anatomy</p>
+            <h2 id="exhibit-title">When does a conclusion remain supported?</h2>
+          </div>
+          <span class="status-chip">Interactive</span>
+        </div>
+
+        <p class="section-intro">
+          Toggle the premises of a classical syllogism. The lab reports only whether the conclusion
+          is supported <em>by this argument</em>; it does not declare a premise or conclusion true.
+        </p>
+
+        <div id="argument-claims" class="claim-stack" aria-live="polite"></div>
+
+        <aside class="support-panel" aria-labelledby="support-title">
+          <p class="eyebrow">Current result</p>
+          <h3 id="support-title">Argument support</h3>
+          <p id="support-status" class="support-status"></p>
+          <p id="support-detail" class="support-detail"></p>
+        </aside>
+      </section>
+
+      <section id="choice-lab" class="choice-lab" aria-labelledby="choice-lab-title">
+        <div class="section-heading choice-lab-heading">
+          <div>
+            <p class="eyebrow">Interactive collection · 18 classic problems</p>
+            <h2 id="choice-lab-title">Choose a position, then inspect its commitments.</h2>
+          </div>
+          <span class="status-chip">No scoring</span>
+        </div>
+        <p class="section-intro">
+          These are deliberately compact entry points, not verdicts. Each option states a recognizable
+          philosophical direction and one pressure point that keeps the problem open.
+        </p>
+
+        <div id="family-filters" class="family-filters" aria-label="Filter exhibits by topic"></div>
+
+        <div class="choice-layout">
+          <aside class="choice-catalog-shell" aria-label="Classic philosophy problems">
+            <div id="choice-catalog" class="choice-catalog"></div>
+          </aside>
+
+          <article class="choice-stage" aria-labelledby="choice-title">
+            <p id="choice-meta" class="eyebrow"></p>
+            <h3 id="choice-title" class="choice-title"></h3>
+            <p id="choice-setup" class="choice-setup"></p>
+
+            <section class="choice-question-panel" aria-labelledby="choice-question">
+              <h4 id="choice-question"></h4>
+              <div id="choice-options" class="choice-options"></div>
+            </section>
+
+            <aside id="choice-result" class="choice-result" aria-live="polite"></aside>
+
+            <p class="reference-line">
+              <span>Reference:</span>
+              <a id="choice-reference" rel="noreferrer"></a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="principles" class="principles" aria-labelledby="principles-title">
+        <p class="eyebrow">Repository boundary</p>
+        <h2 id="principles-title">Local reasoning first.</h2>
+        <div class="principle-grid">
+          <article>
+            <span>01</span>
+            <h3>Exhibits before ontology</h3>
+            <p>Let repeated philosophical presentations reveal the abstractions worth sharing.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Choice is not endorsement</h3>
+            <p>Represent competing answers fairly and expose both commitments and objections.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Promote proven patterns</h3>
+            <p>Useful primitives may later inform worldview-lab or truth-core, but experiments start here.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Philosophy Lab · an experimental presentation layer for small philosophical objects.</p>
+    </footer>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

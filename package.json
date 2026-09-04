@@ -1,0 +1,25 @@
+{
+  "name": "@moritzbrantner/philosophy-lab",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun web/index.html --console",
+    "build": "rm -rf dist && bun build web/index.html --outdir=dist --target=browser",
+    "format": "oxfmt web/src tests package.json tsconfig.json .coding-tooling.json .coding-tooling.expectations.json renovate.json .devcontainer/devcontainer.json",
+    "format:check": "oxfmt --check web/src tests package.json tsconfig.json .coding-tooling.json .coding-tooling.expectations.json renovate.json .devcontainer/devcontainer.json",
+    "lint": "oxlint web/src tests",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "bun test tests/unit",
+    "test:unit": "bun test tests/unit",
+    "test:integration": "bun test tests/integration",
+    "verify": "bun run format:check && bun run lint && bun run typecheck && bun run test:unit && bun run test:integration && bun run build"
+  },
+  "devDependencies": {
+    "oxfmt": "0.66.0",
+    "oxlint": "1.81.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "typescript": "7.0.2"
+  },
+  "packageManager": "bun@1.4.0"
+}

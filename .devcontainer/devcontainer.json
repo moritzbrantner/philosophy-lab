@@ -1,0 +1,9 @@
+{
+  "name": "philosophy-lab",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "postCreateCommand": "bash scripts/codex-environment.sh setup",
+  "forwardPorts": [3000]
+}
