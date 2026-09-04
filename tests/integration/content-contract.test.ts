@@ -2,10 +2,7 @@ import { expect, test } from "bun:test";
 import { readFile } from "node:fs/promises";
 
 import { validateArgument } from "../../web/src/argument-state.ts";
-import {
-  philosophyFamilies,
-  validateChoiceExhibit,
-} from "../../web/src/choice-exhibit.ts";
+import { philosophyFamilies, validateChoiceExhibit } from "../../web/src/choice-exhibit.ts";
 import { argumentAnatomy, choiceExhibits } from "../../web/src/exhibits.ts";
 
 test("the page exposes the landmarks required by both interactive exhibit families", async () => {
