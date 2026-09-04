@@ -5,14 +5,16 @@ export const justiceExhibits = [
     id: "prisoners-dilemma",
     title: "Prisoner's dilemma",
     family: "justice",
-    question: "Should you cooperate when individual incentives push both players toward a worse joint outcome?",
+    question:
+      "Should you cooperate when individual incentives push both players toward a worse joint outcome?",
     setup:
       "Two players separately choose cooperate or defect. Each gets a better personal outcome by defecting no matter what the other does, yet mutual defection leaves both worse off than mutual cooperation.",
     options: [
       {
         id: "defect",
         label: "Defect",
-        summary: "In a one-shot game with the standard payoffs, defection dominates cooperation for each player individually.",
+        summary:
+          "In a one-shot game with the standard payoffs, defection dominates cooperation for each player individually.",
         commitment:
           "Instrumental rationality can recommend the individually safer action even when identical reasoning by both players produces a worse collective result.",
         challenge:
@@ -21,7 +23,8 @@ export const justiceExhibits = [
       {
         id: "cooperate",
         label: "Cooperate",
-        summary: "Mutual cooperation reaches the better joint outcome and may be rational under broader norms or commitments.",
+        summary:
+          "Mutual cooperation reaches the better joint outcome and may be rational under broader norms or commitments.",
         commitment:
           "Trust, morality, team reasoning, or concern for the other player can legitimately alter what counts as the relevant objective.",
         challenge:
@@ -30,7 +33,8 @@ export const justiceExhibits = [
       {
         id: "depends-on-game",
         label: "Change the game, not the chooser",
-        summary: "Institutions, repetition, reputation, and communication can transform the incentives.",
+        summary:
+          "Institutions, repetition, reputation, and communication can transform the incentives.",
         commitment:
           "Many social dilemmas are best addressed by redesigning rules so individual and collective interests align.",
         challenge:
@@ -46,14 +50,16 @@ export const justiceExhibits = [
     id: "veil-of-ignorance",
     title: "The veil of ignorance",
     family: "justice",
-    question: "What principles of society would you choose without knowing which position in that society will be yours?",
+    question:
+      "What principles of society would you choose without knowing which position in that society will be yours?",
     setup:
       "Imagine choosing basic social principles while ignorant of your wealth, class, talents, sex, ethnicity, religion, health, and particular conception of the good. You do know general facts about society and human needs.",
     options: [
       {
         id: "protect-worst-off",
         label: "Prioritize fair terms and the least advantaged",
-        summary: "Ignorance of your position encourages robust basic liberties and safeguards against ending up badly placed.",
+        summary:
+          "Ignorance of your position encourages robust basic liberties and safeguards against ending up badly placed.",
         commitment:
           "Fair principles should not be tailored to anyone's accidental social advantages, and inequalities require special justification.",
         challenge:
@@ -62,7 +68,8 @@ export const justiceExhibits = [
       {
         id: "maximize-total",
         label: "Maximize expected total welfare",
-        summary: "Without knowing your place, choose institutions with the highest expected aggregate well-being.",
+        summary:
+          "Without knowing your place, choose institutions with the highest expected aggregate well-being.",
         commitment:
           "Impartiality can be modeled through equal consideration of each possible social position rather than priority to the worst-off.",
         challenge:
@@ -71,7 +78,8 @@ export const justiceExhibits = [
       {
         id: "reject-device",
         label: "Reject the device",
-        summary: "Justice may require information about history, community, desert, relationships, or concrete goods that the veil deliberately removes.",
+        summary:
+          "Justice may require information about history, community, desert, relationships, or concrete goods that the veil deliberately removes.",
         commitment:
           "Impartiality is not the only relevant moral perspective, and abstraction can erase ethically important differences.",
         challenge:
