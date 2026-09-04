@@ -5,7 +5,8 @@ export const identityExhibits = [
     id: "teletransporter",
     title: "The teletransporter",
     family: "identity",
-    question: "If a machine destroys your body and creates an exact psychological duplicate on Mars, did you survive?",
+    question:
+      "If a machine destroys your body and creates an exact psychological duplicate on Mars, did you survive?",
     setup:
       "The machine scans you, destroys the original body, and constructs a molecule-for-molecule duplicate on Mars with your memories, character, plans, and sense of being you.",
     options: [
@@ -21,7 +22,8 @@ export const identityExhibits = [
       {
         id: "new-person",
         label: "No — the original dies",
-        summary: "A perfect copy is still a copy; survival requires bodily or organismic continuity.",
+        summary:
+          "A perfect copy is still a copy; survival requires bodily or organismic continuity.",
         commitment:
           "Numerical identity depends on persistence of the same living individual or another non-duplicable continuity relation.",
         challenge:
@@ -30,7 +32,8 @@ export const identityExhibits = [
       {
         id: "identity-not-what-matters",
         label: "Identity may be the wrong question",
-        summary: "Psychological continuity could preserve what matters in survival even when strict identity has no clean answer.",
+        summary:
+          "Psychological continuity could preserve what matters in survival even when strict identity has no clean answer.",
         commitment:
           "Practical concern for future selves may track continuity and connectedness rather than a further all-or-nothing identity fact.",
         challenge:
@@ -53,7 +56,8 @@ export const identityExhibits = [
       {
         id: "continuous-ship",
         label: "The continuously repaired ship",
-        summary: "Persistence follows continuous function, structure, and history through gradual change.",
+        summary:
+          "Persistence follows continuous function, structure, and history through gradual change.",
         commitment:
           "Objects can survive replacement of all their material parts when the replacement happens through the right continuous process.",
         challenge:
@@ -62,7 +66,8 @@ export const identityExhibits = [
       {
         id: "reassembled-ship",
         label: "The reassembled original planks",
-        summary: "Material continuity grounds identity more strongly than continuous operation with replacement parts.",
+        summary:
+          "Material continuity grounds identity more strongly than continuous operation with replacement parts.",
         commitment:
           "The original matter can survive disassembly and later reassembly into the same object.",
         challenge:
@@ -71,7 +76,8 @@ export const identityExhibits = [
       {
         id: "criteria-break-down",
         label: "Neither answer is uniquely forced",
-        summary: "Our ordinary criteria of identity pull in different directions in this engineered case.",
+        summary:
+          "Our ordinary criteria of identity pull in different directions in this engineered case.",
         commitment:
           "Object identity may be context-sensitive, interest-relative, or simply indeterminate in some fission-like scenarios.",
         challenge:
@@ -94,9 +100,9 @@ export const identityExhibits = [
       {
         id: "sharp-boundary",
         label: "There is a sharp cutoff",
-        summary: "One particular transition really does change the truth value even if humans cannot know where it is.",
-        commitment:
-          "Vague language can have precise but epistemically inaccessible boundaries.",
+        summary:
+          "One particular transition really does change the truth value even if humans cannot know where it is.",
+        commitment: "Vague language can have precise but epistemically inaccessible boundaries.",
         challenge:
           "It is difficult to explain what could make, say, 10,432 grains not a heap while 10,433 suddenly is one.",
       },
@@ -112,7 +118,8 @@ export const identityExhibits = [
       {
         id: "degrees-context",
         label: "Use degrees or context",
-        summary: "Heaphood can vary gradually, or the relevant threshold can shift with conversational context.",
+        summary:
+          "Heaphood can vary gradually, or the relevant threshold can shift with conversational context.",
         commitment:
           "Vagueness reflects graded or context-sensitive application rather than one hidden universal boundary.",
         challenge:
