@@ -13,6 +13,7 @@ It is intentionally narrower than `worldview-lab` and less formal than `truth-co
 - Treat an argument's internal support relation separately from the truth of its premises or conclusion.
 - Present competing viewpoints and objections fairly; the UI may explain an argument without endorsing it.
 - Keep exhibit-specific presentation structures local until at least several exhibits benefit from the same primitive.
+- Use `ChoiceExhibit` only for problems that naturally fit a compact question with two to four positions, commitments, and pressure points. Do not force diagrammatic, sequential, quantitative, or graph-shaped problems into it.
 - Link or cite sources when an exhibit makes historical, textual, or attribution claims.
 - Do not move comprehensive worldview modeling into this repository.
 - Do not move formal proof obligations into this repository when `truth-core` is the natural owner.
@@ -20,21 +21,20 @@ It is intentionally narrower than `worldview-lab` and less formal than `truth-co
 ## Engineering boundaries
 
 - Browser code is TypeScript.
-- Keep the initial application dependency-light; add frameworks only when they solve a demonstrated problem.
+- Keep the application dependency-light; add frameworks only when they solve a demonstrated problem.
 - State transitions and content contracts should be deterministic and testable without a browser where practical.
 - Accessibility is part of the exhibit contract: semantic structure, keyboard operation, visible focus, and textual state must survive presentation experiments.
-- Avoid hidden global state. URL/shareable state can be introduced when an exhibit needs it.
+- Avoid hidden global state. Durable non-sensitive exhibit state that is meaningful to share should remain URL-addressable.
 - Prefer small modules with explicit data flow over framework-shaped abstractions.
 
-## Initial UI convention exceptions
+## Current UI convention exceptions
 
-The repository installs the shared `ui` convention module, but the foundation intentionally opts out of three broad application defaults while the exhibit/content model is still being discovered:
+The repository installs the shared `ui` convention module, but two broad application defaults remain intentionally deferred while the content model stabilizes:
 
-- **UI-003 theme preference:** the foundation is light-only. Add light/dark/system modes with persisted explicit choice once the visual system is reused by multiple implemented exhibits.
-- **UI-004 localization:** the foundation is English-only. Add `en`, `de`, and `es` together once exhibit copy has a stable content boundary rather than embedding a premature translation architecture into the first specimen.
-- **UI-006 shareable state:** premise-toggle state is local-only in the first exhibit. Make durable non-sensitive exhibit state URL-addressable once a second interactive exhibit establishes the state contract.
+- **UI-003 theme preference:** the current application is light-only. The classic-problems batch now provides enough reused UI surface that light/dark/system preference is a triggered follow-up rather than a speculative foundation feature.
+- **UI-004 localization:** the application is English-only. The `ChoiceExhibit` content boundary is now stable enough for an `en`, `de`, and `es` localization follow-up; keep new copy centralized so that work stays tractable.
 
-These are explicit repository-level exceptions, not silent defaults. Remove each exception when its trigger is reached; do not let a temporary foundation constraint become accidental permanent policy.
+**UI-006 shareable state is no longer an exception:** the selected classic problem and answer are URL-addressable. Preserve that contract when extending durable non-sensitive interaction state.
 
 ## Commands
 
