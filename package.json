@@ -16,7 +16,7 @@
     "verify": "bun run format:check && bun run lint && bun run typecheck && bun run test:unit && bun run test:integration && bun run build"
   },
   "devDependencies": {
-    "oxfmt": "0.66.0",
+    "oxfmt": "0.73.0",
     "oxlint": "1.81.0",
     "oxlint-tsgolint": "7.0.2003",
     "typescript": "7.0.2"
