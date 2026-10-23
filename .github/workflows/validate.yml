@@ -22,7 +22,7 @@ jobs:
         with:
           operation: run
           tier: fast
-          bun-version: 1.4.2
+          bun-version: 1.4.3
           install-mode: none
 
       - name: Detect structural validation changes
@@ -59,7 +59,7 @@ jobs:
         uses: moritzbrantner/coding-tooling@a630598d369ac94d0f549dce5c859b9dd28b250c
         with:
           operation: conformance
-          bun-version: 1.4.2
+          bun-version: 1.4.3
           install-mode: none
           report-path: .artifacts/coding-tooling/conformance.json
 
@@ -68,7 +68,7 @@ jobs:
         uses: moritzbrantner/coding-tooling@a630598d369ac94d0f549dce5c859b9dd28b250c
         with:
           operation: findings
-          bun-version: 1.4.2
+          bun-version: 1.4.3
           install-mode: none
           report-path: .artifacts/coding-tooling/findings.json
 
