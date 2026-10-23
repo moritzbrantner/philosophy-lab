@@ -18,11 +18,11 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Run fast validation tier
-        uses: moritzbrantner/coding-tooling@a630598d369ac94d0f549dce5c859b9dd28b250c
+        uses: moritzbrantner/coding-tooling@2ceb2b57c946fd042fdf098c05427519c146a62f
         with:
           operation: run
           tier: fast
-          bun-version: 1.4.3
+          bun-version: latest
           install-mode: none
 
       - name: Detect structural validation changes
@@ -56,19 +56,19 @@ jobs:
 
       - name: Check repository conformance
         if: steps.structure.outputs.changed == 'true'
-        uses: moritzbrantner/coding-tooling@a630598d369ac94d0f549dce5c859b9dd28b250c
+        uses: moritzbrantner/coding-tooling@2ceb2b57c946fd042fdf098c05427519c146a62f
         with:
           operation: conformance
-          bun-version: 1.4.3
+          bun-version: latest
           install-mode: none
           report-path: .artifacts/coding-tooling/conformance.json
 
       - name: Check deterministic findings
         if: steps.structure.outputs.changed == 'true'
-        uses: moritzbrantner/coding-tooling@a630598d369ac94d0f549dce5c859b9dd28b250c
+        uses: moritzbrantner/coding-tooling@2ceb2b57c946fd042fdf098c05427519c146a62f
         with:
           operation: findings
-          bun-version: 1.4.3
+          bun-version: latest
           install-mode: none
           report-path: .artifacts/coding-tooling/findings.json
 
