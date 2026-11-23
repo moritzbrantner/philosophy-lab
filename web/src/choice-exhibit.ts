@@ -49,7 +49,9 @@ export function resolveChoice(
   exhibit: ChoiceExhibit,
   optionId: string | undefined,
 ): ChoiceOption | undefined {
-  if (!optionId) return undefined;
+  if (!optionId) {
+    return undefined;
+  }
   return exhibit.options.find((option) => option.id === optionId);
 }
 
@@ -62,7 +64,9 @@ export function validateChoiceExhibit(exhibit: ChoiceExhibit): readonly string[]
   }
 
   for (const option of exhibit.options) {
-    if (optionIds.has(option.id)) errors.push(`${exhibit.id} has duplicate option id ${option.id}`);
+    if (optionIds.has(option.id)) {
+      errors.push(`${exhibit.id} has duplicate option id ${option.id}`);
+    }
     optionIds.add(option.id);
   }
 

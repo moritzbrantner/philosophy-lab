@@ -36,8 +36,12 @@ export function togglePremise(
   premiseId: string,
 ): AcceptanceState {
   const claim = argument.claims.find((candidate) => candidate.id === premiseId);
-  if (!claim) throw new Error(`Unknown claim: ${premiseId}`);
-  if (claim.role !== "premise") throw new Error(`Claim is not a premise: ${premiseId}`);
+  if (!claim) {
+    throw new Error(`Unknown claim: ${premiseId}`);
+  }
+  if (claim.role !== "premise") {
+    throw new Error(`Claim is not a premise: ${premiseId}`);
+  }
 
   return {
     ...state,
@@ -51,9 +55,12 @@ export function conclusionSupport(
   conclusionId: string,
 ): SupportStatus {
   const conclusion = argument.claims.find((claim) => claim.id === conclusionId);
-  if (!conclusion) throw new Error(`Unknown conclusion: ${conclusionId}`);
-  if (conclusion.role !== "conclusion")
+  if (!conclusion) {
+    throw new Error(`Unknown conclusion: ${conclusionId}`);
+  }
+  if (conclusion.role !== "conclusion") {
     throw new Error(`Claim is not a conclusion: ${conclusionId}`);
+  }
 
   const missingPremiseIds = (conclusion.dependsOn ?? []).filter(
     (premiseId) => state[premiseId] !== true,
@@ -70,12 +77,16 @@ export function validateArgument(argument: ArgumentDefinition): readonly string[
   const ids = new Set<string>();
 
   for (const claim of argument.claims) {
-    if (ids.has(claim.id)) errors.push(`Duplicate claim id: ${claim.id}`);
+    if (ids.has(claim.id)) {
+      errors.push(`Duplicate claim id: ${claim.id}`);
+    }
     ids.add(claim.id);
   }
 
   const conclusions = argument.claims.filter((claim) => claim.role === "conclusion");
-  if (conclusions.length === 0) errors.push("Argument must contain at least one conclusion");
+  if (conclusions.length === 0) {
+    errors.push("Argument must contain at least one conclusion");
+  }
 
   for (const conclusion of conclusions) {
     for (const dependencyId of conclusion.dependsOn ?? []) {
