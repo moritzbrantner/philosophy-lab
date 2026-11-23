@@ -16,7 +16,7 @@ import { argumentAnatomy, choiceExhibits } from "./exhibits.ts";
 
 function requiredElement<T extends Element>(selector: string): T {
   const element = document.querySelector<T>(selector);
-  if (!element) throw new Error(`Missing required element: ${selector}`);
+  if (!element) {throw new Error(`Missing required element: ${selector}`);}
   return element;
 }
 
@@ -42,7 +42,7 @@ function restoreChoiceStateFromUrl(): void {
   const parameters = new URLSearchParams(window.location.search);
   const requestedExhibitId = parameters.get("exhibit");
   const requestedExhibit = choiceExhibits.find((exhibit) => exhibit.id === requestedExhibitId);
-  if (!requestedExhibit) return;
+  if (!requestedExhibit) {return;}
 
   activeExhibitId = requestedExhibit.id;
   const requestedOptionId = parameters.get("choice");
@@ -57,8 +57,8 @@ function syncChoiceStateToUrl(): void {
   url.searchParams.set("exhibit", exhibit.id);
 
   const selectedOptionId = selectedOptions.get(exhibit.id);
-  if (selectedOptionId) url.searchParams.set("choice", selectedOptionId);
-  else url.searchParams.delete("choice");
+  if (selectedOptionId) {url.searchParams.set("choice", selectedOptionId);}
+  else {url.searchParams.delete("choice");}
 
   window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
 }
@@ -104,7 +104,7 @@ function renderArgument(): void {
   claimsRoot.replaceChildren(...argumentAnatomy.claims.map(renderClaim));
 
   const conclusion = argumentAnatomy.claims.find((claim) => claim.role === "conclusion");
-  if (!conclusion) throw new Error("Argument exhibit has no conclusion");
+  if (!conclusion) {throw new Error("Argument exhibit has no conclusion");}
 
   const result = conclusionSupport(argumentAnatomy, acceptance, conclusion.id);
   supportStatus.dataset.state = result.kind;
@@ -128,19 +128,19 @@ function renderArgument(): void {
 
 function activeExhibit(): ChoiceExhibit {
   const exhibit = choiceExhibits.find((candidate) => candidate.id === activeExhibitId);
-  if (!exhibit) throw new Error(`Unknown active exhibit: ${activeExhibitId}`);
+  if (!exhibit) {throw new Error(`Unknown active exhibit: ${activeExhibitId}`);}
   return exhibit;
 }
 
 function visibleExhibits(): readonly ChoiceExhibit[] {
-  if (activeFamily === "all") return choiceExhibits;
+  if (activeFamily === "all") {return choiceExhibits;}
   return choiceExhibits.filter((exhibit) => exhibit.family === activeFamily);
 }
 
 function activateFirstVisibleIfNeeded(): void {
-  if (visibleExhibits().some((exhibit) => exhibit.id === activeExhibitId)) return;
+  if (visibleExhibits().some((exhibit) => exhibit.id === activeExhibitId)) {return;}
   const first = visibleExhibits()[0];
-  if (first) activeExhibitId = first.id;
+  if (first) {activeExhibitId = first.id;}
 }
 
 function renderFamilyFilters(): void {
